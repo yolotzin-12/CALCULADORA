@@ -5,15 +5,25 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Libro de alumnos</title>
+    <link href="practicasjsd/css/bootstrap.css" rel="stylesheet"/>
 </head>
 <body>
     <header>
-        <h1>Bienvenidos al 3-D</h1>
+        <nav class="navbar bg-black">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#">Bienvenidos al 3-D</a>
+            </div>
+        </nav>
     </header>
     <hr>
     <main>
-        <table id="tabla_alumnos">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12">
+            <table class="table table-hover" id="tabla_alumnos">
             <tr>
                 <th>Nombre</th>
                 <th>Edad</th>
@@ -21,20 +31,32 @@
                 <th>Imagen perfil</th>
             </tr>
         </table>
-        <br>
-        <button type="button" id="agregar">Pintar alumno</button>
-        <br>
-        <form action="#" method="post" id="formulario">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre"/>
-            <br>
-            <button type="button" id="create">Nuevo alumno/a</button>
-        </form>
+
+            <button class="btn btn-primary" type="button" id="agregar">Pintar alumno</button>
+                </div>
+            <div class="col-md-6 col-sm-12">
+                <form action="#" method="post" id="formulario">
+
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control"/>
+                    </div>
+
+
+                    <br>
+                    <button class="btn btn-primary" type="button" id="create">Nuevo alumno/a</button>
+                </form>
+            </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>Página realizada por el 3-D - Todos lo derechos reservados</p>
+    <footer class="fixed-bottom py-3 bg-dark text-light">
+        <div class="container text-center">
+            <p>Página realizada por el 3-D - Todos lo derechos reservados</p>
+        </div>
     </footer>
 <script src="practicasjsd/js/tabla.js"></script>
+<script src="practicasjsd/js/bootstrap.js"></script>
 </body>
 </html>
