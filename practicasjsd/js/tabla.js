@@ -36,10 +36,12 @@ function add_alumno(){
 document.getElementById("agregar").addEventListener("click", add_alumno);
 
 function create_alumno(){
-    let nombre = document.createElement("nombre").value;
-    let nuevo_alumno = {nombre: nombre, edad: 0, matricula: "",imagen: ""};
+
+    let nombre = document.getElementById("nombre").value;
+    let nuevo_alumno = {nombre: nombre, edad: 0, matricula: "", imagen: ""};
     bd_alumnos.push(nuevo_alumno);
     document.getElementById("formulario").reset();
 }
 
+document.getElementById("create").addEventListener("click", create_alumno);
 document.getElementById("create_alumno").addEventListener("click", create_alumno);
